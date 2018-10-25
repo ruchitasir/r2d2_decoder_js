@@ -140,7 +140,7 @@ BOP! (pretty sure this is a space!)
 Stored in an array of arrays, those inputs look like this:
 
 ```javascript
-let inputs = [[2, 6], [0, 5], [9, 3], [4, 8], [10, 5], "BOP", [11, 12], [5, 5], [1, 17], [5, 7], [4, 0]];
+let inputs = [[2, 6], [0, 5], [9, 3], [4, 8], [10, 5], "BOP", [11, 12], [5, 10], [1, 17], [5, 7], [4, 0]]
 ```
 
 It's up to you whether to remove or write code to deal with the "BOP"s!
@@ -234,12 +234,26 @@ node solution.js
 7. Until you get the expected output, you can make changes to your code and run it again to see if you have the answer. Repeat as needed!
 
 
+### Need a hint?
+
+If you're completely lost, take a look in the `answers.js` file and try to work backward and understand what was originally being asked of you.
+
+Hopefully it makes sense after that, but if not, please inform your instructional team!
+
+
 ### BONUS TIME!
 
 Think your solution is slick? Try out the following messages in your decoder:
 
 ```javascript
-let bonus1 = [[1, 8], 'BOP', [13, 2], [6, 11], [1, 4], 'BOP', [2, 1], [0, 1], [10, 10], [12, 9]]; 
+// Bonus 1
+[[1, 8], 'BOP', [5, 7], [13, 2], [9, 13], [1, 4], 'BOP', [2, 1], [0, 1], [10, 10], [10, 9]];
+
+// Bonus 2
+[[9, 16], [13, 2], [13, 8], 'BOP', [2, 1], [0, 1], [10, 4], 'BOP', [2, 2],  [4, 11], 'BOP',  [4, 9], [8, 7], [7, 11], [3, 2], 'BOP', [11, 9], [3, 5], [0, 1], [7, 7], 'BOP', [13, 12], [13, 2], [8, 13], 'BOP', [5, 6], [12, 2], [9, 6], [20, 3]];
+
+// Bonus 3
+[[1, 0], 'BOP', [2, 1], [3, 5], [0, 1], [4, 9], [6, 10], [3, 6],  [4, 11], [8, 6], 'BOP', [2, 7], [12, 7], 'BOP', [3, 1], [5, 0], [1, 5], [4, 5], [12, 2], [2, 3], [1, 3], 'BOP', [9, 5], [12, 3], [14, 6], 'BOP', [1, 1], [22, 3], 'BOP', [8, 12], [4, 4], [4, 1], [8, 1], [11, 7], 'BOP', [12, 11], [3, 6], [8, 6], [12, 7], 'BOP', [0, 2], [10, 11], [11, 9], 'BOP', [2, 0], [25, 0], 'BOP', [3, 5], [10, 5], [10, 13], 'BOP', [11, 9], [3, 5], [4, 1], [17, 8], 'BOP', [2, 1], [1, 0], [5, 9], 'BOP', [16, 2], [1, 4], [3, 0], [7, 8], [9, 13], [2, 3], [9, 9], 'BOP', [12, 11], [4, 4], [5, 0], [8, 6], 'BOP', [11, 9], [3, 5], [4, 1], [17, 8], 'BOP', [0, 6], [1, 0], [9, 3], [0, 12]];
 ```
 
 ---
