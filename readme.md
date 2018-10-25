@@ -16,8 +16,10 @@ Questions? Comments?
 So, you're learning JavaScript! Let's put your skills to the test!
 
 You will practice these programming concepts we've covered in class:
-* Declaring and using variables
+
 * Using mathematical operators
+* Declaring, adding to, and looping through arrays
+* Declaring and accessing JavaScript objects
 * Running local `.js` files from your terminal with the `node` command
 
 ---
@@ -85,7 +87,41 @@ You got a result of `8`. Now, look that up in the corresponding key-value chart:
 | 25 | Y |
 | 26 | Z |
 
-So, according to the chart, the first letter is `H`! It's your job to figure out the rest of the message! Here is the full list of inputs you've got written down.
+So, according to the chart, the first letter is `H`. Great! Now it's your job to figure out the rest of the message! However, we don't want to look up each letter manually! Let's put it into code! You can use the following JavaScript object in your code. (Go ahead and copy it into your `solution.js` file when you're ready!
+
+```javascript
+let table = {
+  1: 'A',
+  2: 'B',
+  3: 'C',
+  4: 'D',
+  5: 'E',
+  6: 'F',
+  7: 'G',
+  8: 'H',
+  9: 'I',
+  10: 'J',
+  11: 'K',
+  12: 'L',
+  13: 'M',
+  14: 'N',
+  15: 'O',
+  16: 'P',
+  17: 'Q',
+  18: 'R',
+  19: 'S',
+  20: 'T',
+  21: 'U',
+  22: 'V',
+  23: 'W',
+  24: 'X',
+  25: 'Y', 
+  26: 'Z',
+  'BOP': ' '
+};
+```
+
+Here is the full list of inputs you've got written down.
 
 ```
 2 beeps, 6 boops
@@ -101,40 +137,85 @@ BOP! (pretty sure this is a space!)
 4 beeps, 0 boops
 ```
 
-In a separate file, print out the numerical total for each beep-boop combo as we did above. In a comment, write the letter that the number corresponds to.
+Stored in an array of arrays, those inputs look like this:
+
+```javascript
+let inputs = [[2, 6], [0, 5], [9, 3], [4, 8], [10, 5], "BOP", [11, 12], [5, 5], [1, 17], [5, 7], [4, 0]];
+```
+
+It's up to you whether to remove or write code to deal with the "BOP"s!
 
 #### Example Code
 
 ```
-// H
+// Letters array starts out empty
+let letters = [];
+
+// First letter
 let beeps = 2;
 let boops = 6;
 let total = beeps + boops;
-console.log(total); // prints 8
+
+// "push" adds the total to the letters array
+letters.push(total);
+```
+
+A full letters array will look something like this:
+
+```javascript
+[8, 5, 12, 12, ... , 4]
+```
+
+Once you have a full letters array write a `for` (or `forEach`) loop to iterate through the items in the letters array. 
+
+```javascript
+// Array values can be accessed inside a for loop using the index, i
+// Remember! Array counting starts at 0!
+var letters = [8, 5, 12, 12, 15];
+var i = 2;
+
+console.log(letters[i]); // Prints "12"
+```
+
+Once you have your loop looping, inside that loop, access the value in the array and use it as a key to access the object. Remember, JavaScript objects are made up of key-value pairs. You can access the value in an object by its key.
+
+```javascript
+let petsObject = {
+  'dogs': 5,
+  'cats': 2,
+  'birds': 3,
+  'lizards': 1
+};
+
+console.log(petsObject['dogs']); // Prints "5"
 ```
 
 #### Expected Output
 
 ```
-8
-5
-12
-12
-15
-23
-10
-18
-12
-4
+S
+E
+C
+R
+E
+T
+
+M
+E
+S
+S
+A
+G
+E
 ```
 
 ### Run it!
 
-1. Create a new file called `solution.js`.
+1. Find the file provided in this repository called `solution.js`. The input and table are provided as starter code.
 
 2. Open `solution.js` in `Sublime Text`, `Atom`, `VS Code`, or your text editor of choice.
 
-3. Write your code - solve the problem! Remember to hit `save`!
+3. Write your code - solve the problem! Remember to hit `save`! There are hints in the comments of the `solution.js` file if you get confused.
 
 4. Open your Terminal.
 
@@ -142,7 +223,7 @@ console.log(total); // prints 8
 
 5. Navigate to the correct location in your file system
 
-> **Protip**: You may need to use the `cd` command to navigate to the location you have saved `solution.js` at. `cd ..` navigates to the parent folder of the one you're currently in.
+> **Protip**: You may need to use the `cd` command to navigate to the location your `solution.js` file is at. `cd ..` navigates to the parent folder of the one you're currently in.
 
 6. Type the following command: 
 
@@ -151,6 +232,15 @@ node solution.js
 ```
 
 7. Until you get the expected output, you can make changes to your code and run it again to see if you have the answer. Repeat as needed!
+
+
+### BONUS TIME!
+
+Think your solution is slick? Try out the following messages in your decoder:
+
+```javascript
+let bonus1 = [[1, 8], 'BOP', [13, 2], [6, 11], [1, 4], 'BOP', [2, 1], [0, 1], [10, 10], [12, 9]]; 
+```
 
 ---
 
