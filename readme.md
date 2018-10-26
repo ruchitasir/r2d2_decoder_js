@@ -87,7 +87,32 @@ You got a result of `8`. Now, look that up in the corresponding key-value chart:
 | 25 | Y |
 | 26 | Z |
 
-So, according to the chart, the first letter is `H`. Great! Now it's your job to figure out the rest of the message! However, we don't want to look up each letter manually! Let's put it into code! You can use the following JavaScript object in your code. (Go ahead and copy it into your `solution.js` file when you're ready!
+So, according to the chart, the first letter is `H`. Great!
+Here is the full list of inputs you've got written down:
+
+```
+2 beeps, 6 boops
+0 beeps, 5 boops
+9 beeps, 3 boops
+4 beeps, 8 boops
+10 beeps, 5 boops
+BOP! (pretty sure this is a space!)
+11 beeps, 12 boops
+5 beeps, 5 boops
+1 beep, 17 boops
+5 beeps, 7 boops
+4 beeps, 0 boops
+```
+
+Now, this one's short enough to figure out by hand, but not every message is! Let's make a programmatic solution instead. We'll begin by storing those beeps and boops into an array. Stored in an array of arrays, those inputs look like this:
+
+```javascript
+let inputs = [[2, 6], [0, 5], [9, 3], [4, 8], [10, 5], 'BOP', [11, 12], [5, 10], [1, 17], [5, 7], [4, 0]]
+```
+
+> Notice we can mix different types in an array! This array holds other arrays AND strings (the BOPs)
+
+Next let's make a JavaScript object to represent the table above. Remember that objects are made of key-value pairs. We'll use the number as the key and the letter as the value. It will look like this:
 
 ```javascript
 let table = {
@@ -121,74 +146,10 @@ let table = {
 };
 ```
 
-Here is the full list of inputs you've got written down.
+It's up to you whether to remove or write code to deal with each `BOP`! It's in the table in case you want to print out the spaces between words!
 
-```
-2 beeps, 6 boops
-0 beeps, 5 boops
-9 beeps, 3 boops
-4 beeps, 8 boops
-10 beeps, 5 boops
-BOP! (pretty sure this is a space!)
-11 beeps, 12 boops
-5 beeps, 5 boops
-1 beep, 17 boops
-5 beeps, 7 boops
-4 beeps, 0 boops
-```
+Now it's your job to figure out the rest of the message! Let's put it into code! By writing code to do this and not just solving it by hand, we can figure out any message we put in! More messages for you to decode are at the end of this assignment.
 
-Stored in an array of arrays, those inputs look like this:
-
-```javascript
-let inputs = [[2, 6], [0, 5], [9, 3], [4, 8], [10, 5], "BOP", [11, 12], [5, 10], [1, 17], [5, 7], [4, 0]]
-```
-
-It's up to you whether to remove or write code to deal with the "BOP"s!
-
-#### Example Code
-
-```
-// Letters array starts out empty
-let letters = [];
-
-// First letter
-let beeps = 2;
-let boops = 6;
-let total = beeps + boops;
-
-// "push" adds the total to the letters array
-letters.push(total);
-```
-
-A full letters array will look something like this:
-
-```javascript
-[8, 5, 12, 12, ... , 4]
-```
-
-Once you have a full letters array write a `for` (or `forEach`) loop to iterate through the items in the letters array. 
-
-```javascript
-// Array values can be accessed inside a for loop using the index, i
-// Remember! Array counting starts at 0!
-var letters = [8, 5, 12, 12, 15];
-var i = 2;
-
-console.log(letters[i]); // Prints "12"
-```
-
-Once you have your loop looping, inside that loop, access the value in the array and use it as a key to access the object. Remember, JavaScript objects are made up of key-value pairs. You can access the value in an object by its key.
-
-```javascript
-let petsObject = {
-  'dogs': 5,
-  'cats': 2,
-  'birds': 3,
-  'lizards': 1
-};
-
-console.log(petsObject['dogs']); // Prints "5"
-```
 
 #### Expected Output
 
@@ -215,7 +176,19 @@ E
 
 2. Open `solution.js` in `Sublime Text`, `Atom`, `VS Code`, or your text editor of choice.
 
-3. Write your code - solve the problem! Remember to hit `save`! There are hints in the comments of the `solution.js` file if you get confused.
+3. Write your code - solve the problem! Remember to hit `save`! There are hints in the comments of the `solution.js` file if you get confused. Refer to the [Reminders and Example Code](#reminders-and-example-code) section below for examples of using arrays, loops, and objects.
+
+* First make an array called `letters`
+* Loop over the inputs and store the total beeps + boops in the `letters` array (Refer to exhibits A, B, C, and D)
+* A full letters array will look like this for the first message:
+
+```javascript
+[8, 5, 12, 12, 15, 'BOP', 23, 15, 18, 12, 4]
+```
+
+* Loop over the letters array and access each value (Exhibit C)
+* Use each element in the letters array as a key into the `decoderTable` object (Exhibit E)
+* Print the value from the decoderTable with `console.log`
 
 4. Open your Terminal.
 
@@ -234,9 +207,109 @@ node solution.js
 7. Until you get the expected output, you can make changes to your code and run it again to see if you have the answer. Repeat as needed!
 
 
-### Need a hint?
+### Reminders and Example Code
 
-If you're completely lost, take a look in the `answers.js` file and try to work backward and understand what was originally being asked of you.
+#### Exhibit A: Adding to an array
+
+Remember you can use `push` to add to the end of an array.
+
+```
+// Letters array starts out empty
+let letters = [];
+
+// First letter
+let beeps = 2;
+let boops = 6;
+let total = beeps + boops;
+
+// "push" adds the total to the letters array
+letters.push(total);
+```
+
+#### Exhibit B: Accessing an array with an index
+
+When you write a loop, you will often have a variable like `i` that increments each iteration of the loop. `i` is meant to be an index into your array. Here is an example of using indexes without a loop. You can use the number directly or you can use a variable that stores that number. Your computer sees it as the same thing:
+
+```javascript
+var letters = [8, 5, 12, 12, 15];
+var i = 2;
+
+console.log(letters[i]); // Prints "12"
+console.log(letters[2]); // Still prints "12"
+```
+
+> Remember! Array counting starts at 0!
+
+#### Exhibit C: Writing a For Loop
+
+When you write a for loop, you have an index `i` that changes each time the loop is run.
+
+```javascript
+let myArr = [2, 4, 6, 8];
+
+for(let i = 0; i < myArr.length; i++){
+    console.log(myArr[i]);
+}
+
+// Prints: 
+// 2
+// 4
+// 6
+// 8
+```
+
+#### Exhibit D: Accessing an array within another array
+
+Sometimes you need to access a value in an array that is nested within another array. In fact, these can be nested several levels deep! Let's just deal with one level for now. Let's assume we have the following array:
+
+```javascript
+let nestedArr = [[2, 3, 4], [5, 6, 7], [8, 9, 10]];
+```
+
+I would like to access the first value in each inner array: 2, 5, and 8. However, if we access it the same way we did in Exhibit C, we get the entire inner array!
+
+```javascript
+for(let i = 0; i < nestedArr.length; i++){
+    console.log(nestedArr[i]);
+}
+
+// Prints: 
+// [2, 3, 4]
+// [5, 6, 7]
+// [8, 9, 10]
+```
+
+Not what we wanted! I actually have to provide a ~second~ index for the second array. I can actually just add another set of `[]` at the end. In this case I want only the first element, so I will add `[0]`.
+
+```javascript
+for(let i = 0; i < nestedArr.length; i++){
+    console.log(nestedArr[i][0]);
+}
+
+// Prints: 
+// 2
+// 5
+// 8
+```
+
+#### Exhibit E: Accessing a JavaScript object
+
+Remember, JavaScript objects are made up of key-value pairs. You can access the value in an object by its key. It sort of looks like accessing an array, because it uses the square brackets, but instead you are accessing the key inside the brackets rather than an index.
+
+```javascript
+let petsObject = {
+  'dogs': 5,
+  'cats': 2,
+  'birds': 3,
+  'lizards': 1
+};
+
+console.log(petsObject['dogs']); // Prints "5"
+```
+
+### Need More Hints?
+
+If you're completely lost, take a look at the solution branch. You can access the solution branch by switching the branch dropdown (on the top left) from master to solution. Then you will see a file called `answers.js`. Take a look at the solution presented and try to work backward and understand what was originally being asked of you.
 
 Hopefully it makes sense after that, but if not, please inform your instructional team!
 
