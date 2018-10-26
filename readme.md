@@ -49,7 +49,7 @@ You have a robot who communicates in a series of beeps and boops. You usually ge
 
 ![](https://media.giphy.com/media/l0O2Q22fPpxR0zhba/giphy.gif)
 
-#### Walkthrough
+### Walkthrough
 
 Let's say R2D2 gave you 2 beeps and 6 boops. We'll add them together to get a total.
 
@@ -185,15 +185,15 @@ E
 3. Write your code - solve the problem! Remember to hit `save`! There are hints in the comments of the `solution.js` file if you get confused. Refer to the [Reminders and Example Code](#reminders-and-example-code) section below for examples of using arrays, loops, and objects.
 
 * First make an array called `letters`
-* Loop over the inputs and store the total beeps + boops in the `letters` array (Refer to [exhibits A, B, C, and D](#exhibit-a))
+* Loop over the inputs and store the total beeps + boops in the `letters` array (Refer to [exhibits A, B, C, and D](#exhibit-a-adding-to-an-array))
 * A full letters array will look like this for the first message:
 
 ```javascript
 [8, 5, 12, 12, 15, 'BOP', 23, 15, 18, 12, 4]
 ```
 
-* Loop over the letters array and access each value ([Exhibit C](#exhibit-c))
-* Use each element in the letters array as a key into the `decoderTable` object ([Exhibit E](#exhibit-e))
+* Loop over the letters array and access each value ([Exhibit C](#exhibit-c-writing-a-for-loop))
+* Use each element in the letters array as a key into the `decoderTable` object ([Exhibit E](#exhibit-e-accessing-a-javascript-object))
 * Print the value from the decoderTable with `console.log`
 
 4. Open your Terminal.
