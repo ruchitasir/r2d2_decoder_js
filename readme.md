@@ -47,7 +47,7 @@ node solution.js
 
 You have a robot who communicates in a series of beeps and boops. You usually get the gist of what he means, but just once it would be nice to know what's really on his mind! You've noticed a pattern in the beeps and boops, and it seems like the number of beeps and boops correspond to specific letters. Sort of like morse code!
 
-![](http://gph.is/1W9BdVI)
+![](https://media.giphy.com/media/l0O2Q22fPpxR0zhba/giphy.gif)
 
 #### Walkthrough
 
