@@ -104,7 +104,7 @@ BOP! (pretty sure this is a space!)
 4 beeps, 0 boops
 ```
 
-Now, this one's short enough to figure out by hand, but not every message is! Let's make a programmatic solution instead. We'll begin by storing those beeps and boops into an array. Stored in an array of arrays, those inputs look like this:
+Now, this one's short enough to figure out by hand, but not every message is! In fact, there are a bunch more messages for you to decode at the end, so let's make a programmatic solution instead. We'll begin by storing those beeps and boops into an array. Stored in an array of arrays, those inputs look like this:
 
 ```javascript
 let inputs = [[2, 6], [0, 5], [9, 3], [4, 8], [10, 5], 'BOP', [11, 12], [5, 10], [1, 17], [5, 7], [4, 0]]
@@ -115,7 +115,7 @@ let inputs = [[2, 6], [0, 5], [9, 3], [4, 8], [10, 5], 'BOP', [11, 12], [5, 10],
 Next let's make a JavaScript object to represent the table above. Remember that objects are made of key-value pairs. We'll use the number as the key and the letter as the value. It will look like this:
 
 ```javascript
-let table = {
+let decoderTable = {
   1: 'A',
   2: 'B',
   3: 'C',
@@ -153,6 +153,8 @@ Now it's your job to figure out the rest of the message! Let's put it into code!
 
 #### Expected Output
 
+Once you've written the code to add up the totals, loop through the totals, and look them up in the decoder table, it should be printing one letter per line. This is because `console.log` adds a newline at the end.
+
 ```
 S
 E
@@ -170,7 +172,7 @@ G
 E
 ```
 
-### Run it!
+## Directions
 
 1. Find the file provided in this repository called `solution.js`. The input and table are provided as starter code.
 
