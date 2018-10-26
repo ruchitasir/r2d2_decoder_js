@@ -317,9 +317,11 @@ console.log(petsObject['dogs']); // Prints "5"
 
 ### Need More Hints?
 
-If you're completely lost, take a look at the solution branch. You can access the solution branch by switching the branch dropdown (on the top left) from master to solution. Then you will see a file called `answers.js`. Take a look at the solution presented and try to work backward and understand what was originally being asked of you.
+If you're completely lost, take a look at the solution branch. You can access the solution branch by switching the branch dropdown from master to solution. The dropdown to switch the branches is shown in the screenshot below. Then you will see a file called `answers.js`. Take a look at the solution presented and try to work backward and understand what was originally being asked of you.
 
 Hopefully it makes sense after that, but if not, please inform your instructional team!
+
+![](https://res.cloudinary.com/briezh/image/upload/v1540576396/Screen_Shot_2018-10-26_at_10.52.35_AM_yhztnd.png)
 
 
 ## BONUS TIME!
