@@ -47,7 +47,11 @@ node solution.js
 
 You have a robot who communicates in a series of beeps and boops. You usually get the gist of what he means, but just once it would be nice to know what's really on his mind! You've noticed a pattern in the beeps and boops, and it seems like the number of beeps and boops correspond to specific letters. Sort of like morse code!
 
-#### Example Code
+![](http://gph.is/1W9BdVI)
+
+#### Walkthrough
+
+Let's say R2D2 gave you 2 beeps and 6 boops. We'll add them together to get a total.
 
 ```
 let beeps = 2;
@@ -181,15 +185,15 @@ E
 3. Write your code - solve the problem! Remember to hit `save`! There are hints in the comments of the `solution.js` file if you get confused. Refer to the [Reminders and Example Code](#reminders-and-example-code) section below for examples of using arrays, loops, and objects.
 
 * First make an array called `letters`
-* Loop over the inputs and store the total beeps + boops in the `letters` array (Refer to exhibits A, B, C, and D)
+* Loop over the inputs and store the total beeps + boops in the `letters` array (Refer to [exhibits A, B, C, and D](#exhibit-a))
 * A full letters array will look like this for the first message:
 
 ```javascript
 [8, 5, 12, 12, 15, 'BOP', 23, 15, 18, 12, 4]
 ```
 
-* Loop over the letters array and access each value (Exhibit C)
-* Use each element in the letters array as a key into the `decoderTable` object (Exhibit E)
+* Loop over the letters array and access each value ([Exhibit C](#exhibit-c))
+* Use each element in the letters array as a key into the `decoderTable` object ([Exhibit E](#exhibit-e))
 * Print the value from the decoderTable with `console.log`
 
 4. Open your Terminal.
@@ -208,8 +212,10 @@ node solution.js
 
 7. Until you get the expected output, you can make changes to your code and run it again to see if you have the answer. Repeat as needed!
 
+8. Think your decoder is up to snuff? Try replacing the original input with the bonus inputs and see if it still works! [BONUS TIME!](#bonus-time)
 
-### Reminders and Example Code
+
+## Reminders and Example Code
 
 #### Exhibit A: Adding to an array
 
@@ -316,9 +322,9 @@ If you're completely lost, take a look at the solution branch. You can access th
 Hopefully it makes sense after that, but if not, please inform your instructional team!
 
 
-### BONUS TIME!
+## BONUS TIME!
 
-Think your solution is slick? Try out the following messages in your decoder:
+1. Think your solution is slick? Try out the following messages in your decoder:
 
 ```javascript
 // Bonus 1
@@ -330,6 +336,8 @@ Think your solution is slick? Try out the following messages in your decoder:
 // Bonus 3
 [[1, 0], 'BOP', [2, 1], [3, 5], [0, 1], [4, 9], [6, 10], [3, 6],  [4, 11], [8, 6], 'BOP', [2, 7], [12, 7], 'BOP', [3, 1], [5, 0], [1, 5], [4, 5], [12, 2], [2, 3], [1, 3], 'BOP', [9, 5], [12, 3], [14, 6], 'BOP', [1, 1], [22, 3], 'BOP', [8, 12], [4, 4], [4, 1], [8, 1], [11, 7], 'BOP', [12, 11], [3, 6], [8, 6], [12, 7], 'BOP', [0, 2], [10, 11], [11, 9], 'BOP', [2, 0], [25, 0], 'BOP', [3, 5], [10, 5], [10, 13], 'BOP', [11, 9], [3, 5], [4, 1], [17, 8], 'BOP', [2, 1], [1, 0], [5, 9], 'BOP', [16, 2], [1, 4], [3, 0], [7, 8], [9, 13], [2, 3], [9, 9], 'BOP', [12, 11], [4, 4], [5, 0], [8, 6], 'BOP', [11, 9], [3, 5], [4, 1], [17, 8], 'BOP', [0, 6], [1, 0], [9, 3], [0, 12]];
 ```
+
+2. If you got all 3 messages above decoded, write a coded message of your own and see if a classmate's decoder can solve it!
 
 ---
 
